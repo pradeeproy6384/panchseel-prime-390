@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" /> -->
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+	<!-- Font Awesom -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/my-style.css">
+	<!-- Popup Css -->
+	<link rel="stylesheet" type="text/css" href="https://stackoverflow.com/questions/19459912/nested-tabs-in-bootstrap">
+	<link rel="stylesheet" type="text/css" href="http://jsfiddle.net/WK2qT">
+	<!-- Swipper Slider -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css"> -->
+	<link href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.min.css" rel="stylesheet">
+	<title>Panchsheel Prime 390</title>
+	<style type="text/css">
+	.error-msg {
+		color: #c70808;
+		font-size: 14px;
+		text-transform: capitalize;
+		display: block;
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+	</style>
+</head>
+
+<body>
+	<!-- // Start Video Modal // -->
+	<div class="modal pr-pop fade" id="video" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+				<div class="modal-body">
+					<iframe width="100%" height="350" src="https://www.youtube.com/embed/5xo8tKamZoc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // End Video Modal // -->
+	<!-- ====  Download Price List Modal ===== -->
+	<div id="pricelist" class="modal fade pr-pop" role="dialog">
+		<div class="modal-dialog modal-dialog-centered enqr-model-a">
+			<div class="modal-content enqr-model-b">
+				<div class="modal-body tp-qr-pop">
+					<button type="button" class="close en-close" data-dismiss="modal">&times;</button>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="enquiry-popup pop-bg">
+								<div class="frm-ttl form-message">
+									<center><small>Submit Your Details For Latest Information & Best Inventory. </small></center>
+								</div>
+								<form name="pricelist" action="" method="POST">
+									<div class="form-field">
+										<input class="form-control bn-fld" autocomplete="off" name="uname" id="uname" placeholder="Your Name" type="text" /> <span class="error-msg"> <?= isset($nameerror)?$nameerror:"" ?> </span> </div>
+									<div class="form-field">
+										<input type="text" autocomplete="off" name="uemail" id="uemail" placeholder="Email ID" class="form-control bn-fld"> <span class="error-msg"> <?= isset($emailerror)?$emailerror:"" ?> </span> </div>
+									<div class="form-field clear-float">
+										<input type="text" class="form-control bn-fld" placeholder="Enter Mobile" name="uphone" id="uphone" maxlength="10" autocomplete="off"> <span class="error-msg"> <?= isset($phoneerror)?$phoneerror:"" ?> </span> </div>
+									<div class="form-btn">
+										<button type="submit" name="downloadprice" class="btn wish-btn sub-bttn frm-btn"> Download Price List </button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Download Brochures -->
+	<div id="brochure" class="modal fade pr-pop" role="dialog">
+		<div class="modal-dialog modal-dialog-centered enqr-model-a">
+			<div class="modal-content enqr-model-b">
+				<div class="modal-body tp-qr-pop">
+					<button type="button" class="close en-close" data-dismiss="modal">&times;</button>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="enquiry-popup pop-bg">
+								<div class="frm-ttl form-message">
+									<center><small>Submit Your Details For Latest Information & Best Inventory. </small></center>
+								</div>
+								<form name="brochure" action="" method="POST">
+									<div class="form-field">
+										<input class="form-control bn-fld" autocomplete="off" name="uname" id="uname" placeholder="Your Name" type="text" /> <span class="error-msg"> <?= isset($nameerror)?$nameerror:"" ?> </span> </div>
+									<div class="form-field">
+										<input type="text" autocomplete="off" name="uemail" id="uemail" placeholder="Email ID" class="form-control bn-fld" /> <span class="error-msg"> <?= isset($emailerror)?$emailerror:"" ?> </span> </div>
+									<div class="form-field clear-float">
+										<input type="text" class="form-control bn-fld" placeholder="Enter Mobile" name="uphone" id="uphone" maxlength="10" autocomplete="off" /> <span class="error-msg"> <?= isset($phoneerror)?$phoneerror:"" ?> </span> </div>
+									<div class="form-btn">
+										<button type="submit" name="downloadbrochure" class="btn wish-btn frm-btn"> Download Brochure </button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ============= End Brochure & Price List ====== -->
+	<!-- ============= Start Popup Query ====== -->
+
+	<body>
+		<!-- // Start Popup Query // -->
+		<div class="modal pr-pop fade" id="query" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+					<div class="modal-body">
+						<div class="form-message pop-msg"> <small><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>Register here and Avail the <span class="text-danger">Best Offers!!</span></small></div>
+						<form name="sideform" method="POST" action="">
+							<div class="form-field">
+								<input class="form-control bn-fld" autocomplete="off" name="uname" id="uname" placeholder="Your Name" type="text"> <span class="error-msg"> <?= isset($nameerror)?$nameerror:"" ?> </span> </div>
+							<div class="form-field">
+								<input type="text" autocomplete="off" name="uemail" id="uemail" placeholder="Email ID" class="form-control bn-fld"> <span class="error-msg"> <?= isset($emailerror)?$emailerror:"" ?> </span> </div>
+							<div class="form-field clear-float">
+								<input type="text" autocomplete="off" placeholder="Enter Mobile" class="form-control bn-fld" name="uphone" id="uphone" maxlength="10"> <span class="error-msg"> <?= isset($phoneerror)?$phoneerror:"" ?> </span> </div>
+							<!-- <div class="form-field clear-float">
+				<select class="form-control bn-fld" id="ftselect" name="ubudget">
+				<option value="0" selected="">Choose Your Budget...</option>
+				<option value="75 Lacs to 1 Cr">75 Lacs to 1 Cr</option>
+				<option value="1 Cr to 1.25 Cr">1 Cr to 1.25 Cr</option>
+				<option value="1.25 Cr to 1.50 Cr">1.25 Cr to 1.50 Cr</option>
+				</select>
+				</div> -->
+							<div class="form-field">
+								<textarea class="form-control bn-fld1" autocomplete="off" rows="2" name="uquery" id="uquery" placeholder="Query" id="message"></textarea>
+							</div>
+							<div class="form-btn">
+								<button type="submit" name="popup-query" class="btn submnt frm-btn">SEND QUERY</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // End Query Modal // -->
+		<!-- ======== Start Header ======= -->
+		<header class="pr-navigation pr-nav" id="top">
+			<div class="downalod_links" id="downalod_links">
+				<div class="container-fluid conatiner-pad">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="download_list">
+								<ul>
+									<li><span><i class="fa fa-download an_bounce" aria-hidden="true"></i></span> <a id="brochure-pricelist" data-toggle="modal" data-target="#pricelist">&nbsp;Download Price List </a> </li>
+									<li><span><i class="fa fa-download an_bounce" aria-hidden="true"></i></span> <a data-toggle="modal" id="brochure-pdf" data-target="#brochure">&nbsp;Download Brochure </a> </li>
+								</ul>
+							</div>
+							<div class="phone_call"><a href="tel:+919560639503"><i class="fas fa-mobile-alt faa-horizontal animated" aria-hidden="true"></i>&nbsp;+91 9560 639 503</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ========== Download Link ======= -->
+			<nav class="navbar navbar-expand-lg">
+				<div class="container-fluid conatiner-pad">
+					<div class="row">
+						<a class="navbar-brand d-none d-md-block" href="http://www.panchsheelprime390.com"><img src="assets/images/logo.png"></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+						<div class="collapse navbar-collapse d-none d-md-block" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item active"> <a class="nav-link" href="http://www.panchsheelprime390.com">Home <span class="sr-only">(current)</span></a> </li>
+								<li class="nav-item"> <a class="nav-link" href="gallery.html">Gallery</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="master-plan.html">Master Plan</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="floor-plan.html">Floor Plan</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="location-map.html">Location Map</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="specification.html">Specification</a> </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div id="mySidenav" class="sidenav d-md-none d-sm-block"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <a href="http://www.panchsheelprime390.com">Home</a> <a href="gallery.html">Gallery</a> <a href="master-plan.html">Master Plan</a> <a href="floor-plan.html">Floor Plan</a> <a href="location-map.html">Location Map</a> <a href="specification.html">Specification</a> </div> <span onclick="openNav()" class="open_nav d-md-none d-sm-block">
+			<div  onclick="myFunction(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+			</div>
+			</span> 
+		</header>
+<!-- ====== Start Inner Banner ============ --> 
+<div class="inner-banner nav-gap"> 
+  <img src="assets/images/inner-bg.jpg" class="img-fluid"> 
+</div>
+<!-- ====== End Inner Banner ============ -->
+<div class="pr_specification right-bg" id="specifications">
+			<div class="specification-overlay"> </div>
+			<div class="container-fluid conatiner-pad" data-aos="fade-up">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="main-hds hds-mid text-center text-light">Project Specifications</h1> </div>
+				</div>
+				<div class="row justify-content-between mt-3">
+					<div class="col-md-6 col-12">
+						<div class="pr_specification_box">
+							<div class="row">
+								<div class="col-md-2 col-2">
+									<div class="pr_specification_box_img"> <img src="assets/images/specification/1.png" class="img-fluid"> </div>
+								</div>
+								<!-- // -->
+								<div class="col-md-10 col-10">
+									<div class="pr_specification_box_desc mb-4">
+										<h3 class="sp_hds">TOILET </h3>
+										<p>Provision for hot & cold water system. Glazed tiles in pleasing colours on walls up to door level. European WC, washbasin & cistern in white shade in all toilets.  </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 1 -->
+					<div class="col-md-6 col-12">
+						<div class="pr_specification_box">
+							<div class="row">
+								<div class="col-md-2 col-2">
+									<div class="pr_specification_box_img"> <img src="assets/images/specification/2.png" class="img-fluid"> </div>
+								</div>
+								<!-- // -->
+								<div class="col-md-10 col-10">
+									<div class="pr_specification_box_desc mb-4">
+										<h3 class="sp_hds">KITCHEN  </h3>
+										<p>Granite top working platform Modular kitchen, Stainless steel sink Spanish tiles 2 feet above working platform with chrome finish sanitaryware ( jaquar / equivalent).</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 2 -->
+					<div class="col-md-6 col-12">
+						<div class="pr_specification_box">
+							<div class="row">
+								<div class="col-md-2 col-2">
+									<div class="pr_specification_box_img"> <img src="assets/images/specification/3.png" class="img-fluid"> </div>
+								</div>
+								<!-- // -->
+								<div class="col-md-10 col-10">
+									<div class="pr_specification_box_desc mb-4">
+										<h3 class="sp_hds">ELECTRICAL </h3>
+										<p> ISI copper wiring in P.V.C. concealed conduit. Provision for adequate light and power points as well as telephone & TV outlets with protective M.C.Bs. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 3 -->
+					<div class="col-md-6 col-12">
+						<div class="pr_specification_box">
+							<div class="row">
+								<div class="col-md-2 col-2">
+									<div class="pr_specification_box_img"> <img src="assets/images/specification/4.png" class="img-fluid"> </div>
+								</div>
+								<!-- // -->
+								<div class="col-md-10 col-10">
+									<div class="pr_specification_box_desc mb-4">
+										<h3 class="sp_hds">INTERNAL /EXTERNAL FINISH</h3>
+										<p>Finish All internal walls plastered & painted in off-white shade of oil bound distemper, Plaster of Paris punning & cornices in drawing/dining room and bedrooms. Most modern & elegant permanent outer finish with high quality texture paint.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 4 -->
+					
+					<div class="col-md-6 col-12">
+						<div class="pr_specification_box">
+							<div class="row">
+								<div class="col-md-2 col-2">
+									<div class="pr_specification_box_img"> <img src="assets/images/specification/6.png" class="img-fluid"> </div>
+								</div>
+								<!-- // -->
+								<div class="col-md-10 col-10">
+									<div class="pr_specification_box_desc">
+										<h3 class="sp_hds">WATER SUPPLY</h3>
+										<p> Underground and overhead water tanks with pumps for 24 hours uninterrupted water supply. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 6 -->
+               <div class="col-md-6 col-12">
+						<div class="pr_specification_box">
+							<div class="row">
+								<div class="col-md-2 col-2">
+									<div class="pr_specification_box_img"> <img src="assets/images/specification/5.png" class="img-fluid"> </div>
+								</div>
+								<!-- // -->
+								<div class="col-md-10 col-10">
+									<div class="pr_specification_box_desc">
+										<h3 class="sp_hds">WATER SUPPLY  </h3>
+										<p>Underground and overhead water tanks with pumps for 24 hours uninterrupted water supply.  </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 5 -->
+				</div>
+			</div>
+		</div>
+<!-- ========== Start Footer ========== -->
+<section class="footer">
+	<div class="container-fluid">
+	  <div class="row">
+		<div class="col-md-12">
+		  <div class="footer-desc text-center"> <a href="tel:+919560639503" class="ftr-tel">Call: +91 9560 639 503</a>
+			<p class="text-uppercase">RERA NO: UPRERAPRJ8667</p>
+			<!-- <p class="text-uppercase">WWW.UHUDA.ORG.IN</p> -->
+		   <!--  <p><a href="https://up-rera.in/" target="_blank"> www.up-rera.in </a></p> -->
+			<p>Disclaimer : The content mentioned in this website is for information purposes only, prices mentioned are subject to change without notice & properties<br/> mentioned are subject to availability. Images are for representation purposes only. This is not the official website. <br/>We may also send updates to the mobile / email id registered with us. All Rights Reserved. </p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  <div class="copywrite">
+	<p class="ftr-address">Digital Media Planned by <a href="http://monarchindia.co.in/" target="_blank">Monarch India</a>&nbsp;/&nbsp;<a href="privacy-policy.php">Privacy Policy </a></p>
+  </div>
+  <!-- ==== // ===== -->
+  <!-- <div class="rt-icon-settings an_bounce">
+	<div class="qr-text" data-toggle="modal" id="form-query" data-target="#query"> Enquire Now </div>
+  </div> -->
+  <div class="whatsapp_chat an_bounce" data-toggle="modal" id="form-query" data-target="#query"> 
+  <a><i class="fas fa-envelope-open-text"></i><span> </span> </a>
+  </div>
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- <script type="text/javascript" src="assets/js/jquery.magnific-popup.js"></script> -->
+  <script type="text/javascript" src="assets/js/popup-gallery.js"></script>
+  <!-- <script type="text/javascript">
+  $(document).ready(function() {
+	$('.floor-img,.pr-location,.gallery-images,.home-gallery,.pr-floor').magnificPopup({
+	  delegate: 'a',
+	  type: 'image',
+	  // tLoading: 'Loading image #%curr%...',
+	  // mainClass: 'mfp-img-mobile',
+	  gallery: {
+		enabled: true,
+		navigateByImgClick: true,
+		preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+	  },
+	  image: {
+		tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+		titleSrc: function(item) {
+		  return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+		}
+	  }
+	});
+  });
+  </script> -->
+  <!-- Initialize Swiper -->
+  <script>
+  var swiper = new Swiper('.swiper-container', {
+	pagination: {
+	  el: '.swiper-pagination',
+	  type: 'progressbar',
+	},
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+  });
+  </script>
+  <script type="text/javascript">
+  /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+  function openNav() {
+	document.getElementById("mySidenav").style.width = "250px";
+	// document.getElementById("main").style.marginLeft = "250px";
+	// document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+  function closeNav() {
+	document.getElementById("mySidenav").style.width = "0";
+	// document.getElementById("main").style.marginLeft = "0";
+	// document.body.style.backgroundColor = "white";
+  }
+  </script>
+  <script type="text/javascript">
+  $('#query').modal({
+	backdrop: 'static',
+	keyboard: false
+  });
+  </script>
+  <script type="text/javascript">
+  // $(window).scroll(function() {
+  //   var sticky = $('.pr-nav'),
+  //     scroll = $(window).scrollTop();
+  //   if(scroll >= 130) {
+  //     sticky.addClass('fixed');
+  //   } else {
+  //     sticky.removeClass('fixed');
+  //   }
+  // });
+  $(window).scroll(function() {
+	var sticky = $('.new_footer'),
+	  scroll = $(window).scrollTop();
+	if(scroll >= 130) {
+	  sticky.addClass('fixed_footer');
+	} else {
+	  sticky.removeClass('fixed_footer');
+	}
+  });
+  $(function($) {
+	let url = window.location.href;
+	$('nav ul li a').each(function() {
+	  if(this.href === url) {
+		$(this).addClass('activenav');
+	  }
+	});
+  });
+  </script>
+  
+  
+  
+  <script>
+	  $(document).ready(function(){
+		  $('#lightgallery,#lightgallery1').lightGallery(); 
+	  });
+  </script>
+  </body>
+  
+  </html>
